@@ -1,23 +1,42 @@
 
 body{
-    background-color:rgb(240, 246, 250);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
+    color:#3e3f42;
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239bc5e1' fill-opacity='0.6' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 a{
     cursor: pointer;
-    color:#2d2d2d;
     list-style: none;
+    color:#3e3f42;
+}
+a:hover{
+    color:#2d2d2d;
+    opacity:0.85;
+    text-decoration: none;
 }
 .navbar{
     background-color:white;
     margin-bottom:2em;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+}
+.navbar p{
+    font-size:0.9em;
 }
 .logo{
     max-width: 70px;
 }
 .block-container{
     max-width:480px;
-    margin:0.5em auto 2em auto;
+    margin:0em auto 2em auto;
     padding:1em;
 }
 .block{
@@ -51,6 +70,8 @@ a{
     border:none;
     opacity:0.9;
     max-width: 400px;
+    -webkit-box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.3);
 }
 .btn-primary:hover{
     background-color:#16CD9E;
@@ -58,13 +79,67 @@ a{
 }
 .ad{
     height:100px;
-    background-color:grey;
+    background-color:lightgray;
     width:100%;
+    margin:1em 0;
 }
 .job{
-    height:100px;
-    border:1px solid grey;
+    background-color: white;
+    display:block;
+    border:1px solid whitesmoke;
+    padding:10px;
+    margin:0.5em 0;
+    position:relative;
+    border-radius:2px;
+    -webkit-box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.1);
+}
+.job .tag{
+    color:white;
+    position: absolute;
+    top:0;
+    right:0;
+    padding:5px 10px;
+    font-size:0.8em;
+    min-width: 70px;
+    text-align: center;
+    border-radius: 0px 2px 0px 2px;
+}
+.red{
+    background-color:#D3322C;
+}
+.blue{
+    background-color:#0793D8;
+}
+.green{
+    background-color:#16CD9E;
 }
 .job h2{
-
+    font-size:0.8em;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin:0;
+    max-width: 200px;
+}
+.job h4{
+    font-size:0.8em;
+    margin:0;
+    opacity:0.75;
+    display: inline-block;
+}
+.job p{
+    font-size:0.75em;
+    margin:0;
+    opacity:0.75;
+}
+.icon{
+    background-image: url('../images/location.jpg');
+    height:13px;
+    width: 12px;
+    opacity:1;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 10px;
+    padding-top:10px;
 }
